@@ -1,0 +1,157 @@
+/* Fondo en pantalla completa */
+.registrar-mascota-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #3a7bd5, #00d2ff);
+}
+
+/* Caja principal del formulario */
+.registrar-mascota-box {
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 50vw; /* Se adapta mejor a la pantalla */
+    max-width: 700px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover para resaltar el formulario */
+.registrar-mascota-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Título más llamativo */
+.registrar-mascota-title {
+    font-size: 32px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Formulario con mejor distribución */
+.registrar-mascota-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Grupo de cada campo */
+.registrar-mascota-group {
+    text-align: left;
+}
+
+/* Etiquetas de los campos */
+.registrar-mascota-group label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Inputs con diseño moderno */
+.registrar-mascota-input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efecto en los inputs cuando están en foco */
+.registrar-mascota-input:focus {
+    border-color: #3a7bd5;
+    box-shadow: 0px 0px 12px rgba(58, 123, 213, 0.3);
+    transform: scale(1.02);
+}
+
+/* Botón con animación */
+.registrar-mascota-button {
+    background: linear-gradient(to right, #3a7bd5, #00d2ff);
+    border: none;
+    color: white;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Efecto hover del botón */
+.registrar-mascota-button:hover {
+    background: linear-gradient(to right, #2a6abf, #00bfff);
+    box-shadow: 0px 5px 20px rgba(58, 123, 213, 0.4);
+    transform: scale(1.05);
+}
+/* Estilo del mensaje de éxito */
+/* Mensaje de éxito con diseño atractivo */
+.success-message {
+    background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Degradado azul */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  /* Animación de aparición */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animación de salida */
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+  }
+  
+  /* Ícono de check animado */
+  .success-message .check-icon {
+    font-size: 24px;
+    animation: bounce 0.5s ease-in-out infinite alternate;
+  }
+  
+  /* Animación del check */
+  @keyframes bounce {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.2);
+    }
+  }
+  
