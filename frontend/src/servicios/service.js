@@ -7,24 +7,22 @@ const RegistrarM = () => {
   const [raza, setRaza] = useState("");
   const [nombre, setNombre] = useState("");
   const [edad, setEdad] = useState("");
-  const [mensaje, setMensaje] = useState(""); // Estado para el mensaje de éxito
+  const [mensaje, setMensaje] = useState("");
   const navigate = useNavigate();
 
   const hRegistrar = async (e) => {
     e.preventDefault();
-    const token = localStorage.getItem("token"); // Obtener token del localStorage
-    
+    const token = localStorage.getItem("token");
     const response = await fetch("http://localhost:5006/api/registrar-mascota", {
       method: "POST",
       headers: { 
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}` // Añadir token en headers
+        "Authorization": `Bearer ${token}`
       },
       body: JSON.stringify({ especie, raza, nombre, edad }),
     });
 
     const data = await response.json();
-
     if (response.ok) {
       setMensaje("🐾 ¡Registro exitoso! 🎉");
       setTimeout(() => {
@@ -41,9 +39,7 @@ const RegistrarM = () => {
     <div className="registrar-mascota-container">
       <div className="registrar-mascota-box">
         <h2 className="registrar-mascota-title">🐶 Registrar Nueva Mascota 🐱</h2>
-
-        {mensaje && <div className="success-message">{mensaje}</div>} {}
-
+        {mensaje && <div className="success-message">{mensaje}</div>}
         <form onSubmit={hRegistrar} className="registrar-mascota-form">
           <div className="registrar-mascota-group">
             <label>Tipo de Mascota:</label>
